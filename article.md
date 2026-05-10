@@ -1,20 +1,18 @@
+---
+author: "Kyle Jones"
+date_published: "February 28, 2025"
+date_exported_from_medium: "November 10, 2025"
+canonical_link: "https://medium.com/@kyle-t-jones/introduction-to-python-and-pandas-4ea7346aaf3e"
+---
+
 # Introduction to Python and Pandas Python is a widely-used high-level programming language known for its
 readable syntax and versatility. It supports multiple programming...
 
-::::::::::::::::::::::::::::::::::::::::::::::::### Introduction to Python and Pandas for Analytics 
+### Introduction to Python and Pandas for Analytics 
 
-Python is a widely-used high-level programming language known for its
-readable syntax and versatility. It supports multiple programming
-paradigms, including object-oriented, imperative, functional, and
-procedural programming styles. Python's dynamic typing and automatic
-memory management simplify development, making it a go-to language for
-data analysis and scientific computing.
+Python is a widely-used high-level programming language known for its readable syntax and versatility. It supports multiple programming paradigms, including object-oriented, imperative, functional, and procedural programming styles. Python's dynamic typing and automatic memory management simplify development, making it a go-to language for data analysis and scientific computing.
 
-Pandas, built on top of NumPy, is an open-source data manipulation and
-analysis library that offers high-performance, easy-to-use data
-structures like Series and DataFrames. These structures allow efficient
-handling of structured data, resembling columns in spreadsheets or
-tables in SQL databases.
+Pandas, built on top of NumPy, is an open-source data manipulation and analysis library that offers high-performance, easy-to-use data structures like Series and DataFrames. These structures allow efficient handling of structured data, resembling columns in spreadsheets or tables in SQL databases.
 
 Let's start by importing the necessary libraries:
 
@@ -26,12 +24,10 @@ import numpy as np
 ``` 
 print('Pandas Version:', pd.__version__)
 ```
-::::### Basics of Python Programming 
+### Basics of Python Programming 
 
 ### Getting Started with Python
-Python emphasizes readable and straightforward syntax. It uses
-whitespace indentation instead of curly braces or keywords to define
-code blocks, making it intuitive and easy to learn.
+Python emphasizes readable and straightforward syntax. It uses whitespace indentation instead of curly braces or keywords to define code blocks, making it intuitive and easy to learn.
 
 Let's begin with the classic 'Hello World' example:
 
@@ -87,8 +83,7 @@ print(type(person))  # Output: <class 'dict'>
 ```
 
 ### Control Structures
-Python uses straightforward syntax for control structures like loops and
-conditionals.
+Python uses straightforward syntax for control structures like loops and conditionals.
 
 #### If-Else Statements
 ``` 
@@ -114,17 +109,15 @@ while count < 3:
     print(count)
     count += 1
 ```
-::::### Introduction to Pandas 
+### Introduction to Pandas 
 
 Pandas provides two primary data structures:
 
 - **Series:** One-dimensional labeled array.
-- **DataFrame:** Two-dimensional labeled data structure with columns of
-  potentially different types.
+- **DataFrame:** Two-dimensional labeled data structure with columns of potentially different types.
 
 ### Pandas Series
-A Pandas Series is like a column in a spreadsheet or a single column in
-a DataFrame.
+A Pandas Series is like a column in a spreadsheet or a single column in a DataFrame.
 
 ```python
 # Creating a Series from a list
@@ -138,10 +131,9 @@ d = {'a': 100, 'b': 200, 'c': 300}
 s2 = pd.Series(d)
 print("Series from dictionary:\n", s2)
 ```
-::::### Creating Pandas DataFrames 
+### Creating Pandas DataFrames 
 
-A DataFrame is a two-dimensional labeled data structure with columns of
-potentially different types.
+A DataFrame is a two-dimensional labeled data structure with columns of potentially different types.
 
 ```python
 # Creating a DataFrame from a dictionary
@@ -163,11 +155,10 @@ data_list = [
 df2 = pd.DataFrame(data_list)
 print("\nDataFrame from list of dicts:\n", df2)
 ```
-::::### Basic DataFrame Operations 
+### Basic DataFrame Operations 
 
 ### Selecting and Querying Data
-You can select columns using bracket notation and rows using
-`loc` or `iloc`.
+You can select columns using bracket notation and rows using `loc` or `iloc`.
 
 ``` 
 # Selecting a column
@@ -188,7 +179,7 @@ print(df.iloc[0])
 # Querying a DataFrame
 print(df.query("Age > 30"))
 ```
-::::### Modifying DataFrames 
+### Modifying DataFrames 
 
 ``` 
 # Adding a new column
@@ -207,14 +198,14 @@ print("\nHigh salary employees:\n", high_salary)
 df = df.drop(columns=['Salary'])
 print("\nDataFrame after dropping column:\n", df)
 ```
-::::### Grouping and Aggregation 
+### Grouping and Aggregation 
 
 ``` 
 # Grouping data and performing aggregations
 avg_age_by_city = df.groupby('City')['Age'].mean()
 print("\nAverage age by city:\n", avg_age_by_city)
 ```
-::::### Working with DataFrames 
+### Working with DataFrames 
 
 ### File I/O
 Pandas makes it easy to read and write data from various file formats.
@@ -235,7 +226,7 @@ print(df_excel.head())
 ``` 
 df.to_csv("data/output.csv")
 ```
-::::### Handling Missing Data 
+### Handling Missing Data 
 
 ``` 
 # Check for missing values
@@ -246,7 +237,7 @@ print(pd.isnull(df))
 # Drop rows with missing values
 print(df.dropna(how="any"))
 ```
-::::### DataFrame Functions and Transformations 
+### DataFrame Functions and Transformations 
 
 ``` 
 # Apply function to each row
@@ -267,7 +258,7 @@ print(df.describe())
 # Value counts
 print(df['City'].value_counts())
 ```
-::::### Visualization with Pandas 
+### Visualization with Pandas 
 
 Pandas integrates well with Matplotlib for quick data visualizations.
 
@@ -283,7 +274,7 @@ plt.ylabel('Frequency')
 plt.title('Age Distribution')
 plt.show()
 ```
-::::### Advanced Topics 
+### Advanced Topics 
 
 ### Joins and Merges
 ``` 
@@ -302,16 +293,6 @@ df2 = df.copy(deep=True)  # Create a deep copy
 df.to_pickle("data.pkl")
 df_new = pd.read_pickle("data.pkl")
 ```
-::::### Conclusion 
+### Conclusion 
 
-This guide covers the fundamentals of Python and Pandas, equipping you
-with the tools to manipulate and analyze data efficiently. From basic
-operations to advanced data transformations, mastering Pandas enhances
-your productivity and allows you to gain deeper insights from your data.
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::By [Kyle Jones](https://medium.com/@kyle-t-jones) on
-[February 28, 2025](https://medium.com/p/4ea7346aaf3e).
-
-[Canonical
-link](https://medium.com/@kyle-t-jones/introduction-to-python-and-pandas-4ea7346aaf3e)
-
-Exported from [Medium](https://medium.com) on November 10, 2025.
+This guide covers the fundamentals of Python and Pandas, equipping you with the tools to manipulate and analyze data efficiently. From basic operations to advanced data transformations, mastering Pandas enhances your productivity and allows you to gain deeper insights from your data.
