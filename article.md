@@ -45,12 +45,12 @@ print(word_to_print)
 ### Data Types in Python
 Python supports several basic data types:
 
-- **String:** Textual data enclosed in quotes.
-- **Integer:** Whole numbers.
-- **Float:** Decimal numbers.
-- **Boolean:** True or False values.
-- **List:** Ordered and mutable collection of items.
-- **Dictionary:** Key-value pairs.
+- String: Textual data enclosed in quotes.
+- Integer: Whole numbers.
+- Float: Decimal numbers.
+- Boolean: True or False values.
+- List: Ordered and mutable collection of items.
+- Dictionary: Key-value pairs.
 
 ``` 
 # Strings
@@ -113,8 +113,8 @@ while count < 3:
 
 Pandas provides two primary data structures:
 
-- **Series:** One-dimensional labeled array.
-- **DataFrame:** Two-dimensional labeled data structure with columns of potentially different types.
+- Series: One-dimensional labeled array.
+- DataFrame: Two-dimensional labeled data structure with columns of potentially different types.
 
 ### Pandas Series
 A Pandas Series is like a column in a spreadsheet or a single column in a DataFrame.
