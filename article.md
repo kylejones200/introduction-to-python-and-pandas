@@ -19,9 +19,8 @@ Let's start by importing the necessary libraries:
 ```python
 import pandas as pd
 import numpy as np
-```
 
-``` 
+
 print('Pandas Version:', pd.__version__)
 ```
 ### Basics of Python Programming 
@@ -56,27 +55,23 @@ Python supports several basic data types:
 # Strings
 name = "Alice"
 print(type(name))  # Output: <class 'str'>
-```
 
-``` 
+
 # Integers
 age = 30
 print(type(age))  # Output: <class 'int'>
-```
 
-``` 
+
 # Floats
 height = 5.9
 print(type(height))  # Output: <class 'float'>
-```
 
-``` 
+
 # Lists
 fruits = ['apple', 'banana', 'cherry']
 print(type(fruits))  # Output: <class 'list'>
-```
 
-``` 
+
 # Dictionary
 person = {'name': 'Alice', 'age': 30}
 print(type(person))  # Output: <class 'dict'>
@@ -100,9 +95,8 @@ else:
 fruits = ['apple', 'banana', 'cherry']
 for fruit in fruits:
     print(fruit)
-```
 
-``` 
+
 # While Loop
 count = 0
 while count < 3:
@@ -163,19 +157,16 @@ You can select columns using bracket notation and rows using `loc` or `iloc`.
 ``` 
 # Selecting a column
 print("Ages:\n", df['Age'])
-```
 
-``` 
+
 # Selecting a row by label
 print(df.loc[0])
-```
 
-``` 
+
 # Selecting a row by position
 print(df.iloc[0])
-```
 
-``` 
+
 # Querying a DataFrame
 print(df.query("Age > 30"))
 ```
@@ -185,15 +176,13 @@ print(df.query("Age > 30"))
 # Adding a new column
 df['Salary'] = [50000, 60000, 55000, 65000]
 print("\nDataFrame with new column:\n", df)
-```
 
-``` 
+
 # Filtering data
 high_salary = df[df['Salary'] > 55000]
 print("\nHigh salary employees:\n", high_salary)
-```
 
-``` 
+
 # Dropping a column
 df = df.drop(columns=['Salary'])
 print("\nDataFrame after dropping column:\n", df)
@@ -231,9 +220,8 @@ df.to_csv("data/output.csv")
 ``` 
 # Check for missing values
 print(pd.isnull(df))
-```
 
-``` 
+
 # Drop rows with missing values
 print(df.dropna(how="any"))
 ```
@@ -242,19 +230,16 @@ print(df.dropna(how="any"))
 ``` 
 # Apply function to each row
 df['Year'] = df.apply(lambda row: str(row['Age'])[:4], axis=1)
-```
 
-``` 
+
 # Convert to datetime
 df['Year'] = pd.to_datetime(df['Year'])
-```
 
-``` 
+
 # Descriptive statistics
 print(df.describe())
-```
 
-``` 
+
 # Value counts
 print(df['City'].value_counts())
 ```
@@ -264,9 +249,8 @@ Pandas integrates well with Matplotlib for quick data visualizations.
 
 ```python
 import matplotlib.pyplot as plt
-```
 
-``` 
+
 # Histogram
 df['Age'].hist(bins=20)
 plt.xlabel('Age')
