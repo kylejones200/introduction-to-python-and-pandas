@@ -1,9 +1,14 @@
 from pathlib import Path
 
 import pandas as pd
-
+from src import DATA_DIR
 from src.data_io import ensure_sample_data, read_csv_sample, read_excel_sample, write_pickle
 from src.pandas_structures import create_employee_dataframe
+
+
+def test_committed_sample_files_exist():
+    assert (DATA_DIR / "MER_T02_01.csv").is_file()
+    assert (DATA_DIR / "EnergyData.xlsx").is_file()
 
 
 def test_ensure_sample_data_creates_files(tmp_path: Path):

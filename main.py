@@ -9,7 +9,6 @@ from pathlib import Path
 
 import pandas as pd
 import yaml
-
 from src import DATA_DIR, ROOT
 from src.advanced import deep_copy_dataframe, inner_join_example
 from src.data_io import (
@@ -23,6 +22,7 @@ from src.dataframe_ops import (
     add_salary_and_filter,
     apply_transformations,
     average_age_by_city,
+    demo_frame_with_missing,
     describe_and_value_counts,
     handle_missing_values,
     select_and_query,
@@ -89,11 +89,17 @@ def run_dataframe_operations(employees: pd.DataFrame) -> pd.DataFrame:
     logger.info("After dropping salary:\n%s", without_salary)
 
     logger.info("Average age by city:\n%s", average_age_by_city(without_salary))
-    logger.info("Missing values:\n%s", handle_missing_values(without_salary))
+    logger.info(
+        "Missing values:\n%s",
+        handle_missing_values(demo_frame_with_missing()),
+    )
 
     transformed = apply_transformations(without_salary)
     logger.info("Transformed frame:\n%s", transformed)
-    logger.info("Summary stats: %s", describe_and_value_counts(without_salary))
+    logger.info(
+        "Summary stats: %s",
+        describe_and_value_counts(without_salary, transform=True),
+    )
     return without_salary
 
 

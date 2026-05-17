@@ -3,7 +3,6 @@ from src.dataframe_ops import (
     average_age_by_city,
     select_and_query,
 )
-from src.pandas_structures import create_employee_dataframe
 
 
 def test_select_and_query_filters_ages():
@@ -11,8 +10,8 @@ def test_select_and_query_filters_ages():
     assert len(result["age_over_30"]) == 2
 
 
-def test_add_salary_and_filter():
-    high_salary, cleaned = add_salary_and_filter()
+def test_add_salary_and_filter(employees):
+    high_salary, cleaned = add_salary_and_filter(employees)
     assert len(high_salary) == 2
     assert "Salary" not in cleaned.columns
 
