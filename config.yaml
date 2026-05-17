@@ -1,0 +1,14 @@
+data:
+  csv_path: "data/MER_T02_01.csv"
+  excel_path: "data/EnergyData.xlsx"
+  excel_sheet: "after2000"
+
+output:
+  dir: "output"
+  figures_dir: "images"
+  csv_name: "output.csv"
+  pickle_name: "employees.pkl"
+
+run:
+  save_figures: true
+  show_plots: false
