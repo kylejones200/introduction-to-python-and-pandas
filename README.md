@@ -93,3 +93,11 @@ uv run python scripts/generate_sample_data.py
 
 - Sample files in `data/` ship with the repo so tests work on a fresh clone.
 - The article’s `apply` → year example is replaced with `AgeGroup` and `HireDate` for clearer datetime practice.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
