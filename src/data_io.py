@@ -13,7 +13,6 @@ def ensure_sample_data(data_dir: Path | None = None) -> Path:
     """Create article sample files when they are not already on disk."""
     root = data_dir or DATA_DIR
     root.mkdir(parents=True, exist_ok=True)
-
     csv_path = root / "MER_T02_01.csv"
     if not csv_path.exists():
         pd.DataFrame(

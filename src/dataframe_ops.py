@@ -64,9 +64,7 @@ def apply_transformations(df: pd.DataFrame | None = None) -> pd.DataFrame:
         lambda row: "senior" if row["Age"] >= 30 else "junior",
         axis=1,
     )
-    frame["HireDate"] = pd.to_datetime(
-        ["2020-01-15", "2018-06-01", "2019-03-20", "2017-11-30"]
-    )
+    frame["HireDate"] = pd.to_datetime(["2020-01-15", "2018-06-01", "2019-03-20", "2017-11-30"])
     return frame
 
 

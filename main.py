@@ -68,7 +68,6 @@ def run_pandas_structures() -> pd.DataFrame:
     logger.info("Library versions: %s", library_versions())
     logger.info("Series from list:\n%s", create_series_from_list())
     logger.info("Series from dict:\n%s", create_series_from_dict())
-
     employees = create_employee_dataframe()
     logger.info("Employee DataFrame:\n%s", employees)
     logger.info(
@@ -83,17 +82,14 @@ def run_dataframe_operations(employees: pd.DataFrame) -> pd.DataFrame:
     logger.info("Ages:\n%s", selections["ages"])
     logger.info("Row by label:\n%s", selections["row_by_label"])
     logger.info("Age > 30:\n%s", selections["age_over_30"])
-
     high_salary, without_salary = add_salary_and_filter(employees)
     logger.info("High salary:\n%s", high_salary)
     logger.info("After dropping salary:\n%s", without_salary)
-
     logger.info("Average age by city:\n%s", average_age_by_city(without_salary))
     logger.info(
         "Missing values:\n%s",
         handle_missing_values(demo_frame_with_missing()),
     )
-
     transformed = apply_transformations(without_salary)
     logger.info("Transformed frame:\n%s", transformed)
     logger.info(
@@ -107,28 +103,22 @@ def run_file_io(config: dict, employees: pd.DataFrame) -> None:
     data_dir = ensure_sample_data(DATA_DIR)
     csv_path = data_dir / Path(config["data"]["csv_path"]).name
     excel_path = data_dir / Path(config["data"]["excel_path"]).name
-
     logger.info("CSV sample:\n%s", read_csv_sample(csv_path).head())
     logger.info(
         "Excel sample:\n%s",
         read_excel_sample(excel_path, config["data"]["excel_sheet"]).head(),
     )
-
     output_dir = ROOT / config["output"]["dir"]
     write_csv(employees, output_dir / config["output"]["csv_name"])
     reloaded = write_pickle(employees, output_dir / config["output"]["pickle_name"])
     logger.info("Pickle round-trip shape: %s", reloaded.shape)
 
 
-def run_visualization(
-    employees: pd.DataFrame, config: dict, output_dir: Path
-) -> None:
+def run_visualization(employees: pd.DataFrame, config: dict, output_dir: Path) -> None:
     figures_dir = output_dir / config["output"]["figures_dir"]
     plot_age_histogram(
         employees,
-        output_path=figures_dir / "age_distribution.png"
-        if config["run"]["save_figures"]
-        else None,
+        output_path=figures_dir / "age_distribution.png" if config["run"]["save_figures"] else None,
         show=config["run"]["show_plots"],
     )
 
@@ -145,9 +135,7 @@ def run_advanced(employees: pd.DataFrame) -> None:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(
-        description="Introduction to Python and Pandas tutorial"
-    )
+    parser = argparse.ArgumentParser(description="Introduction to Python and Pandas tutorial")
     parser.add_argument("--config", type=Path, default=None, help="Path to config.yaml")
     parser.add_argument(
         "--section",
@@ -157,13 +145,10 @@ def main() -> None:
     )
     parser.add_argument("--output-dir", type=Path, default=None, help="Output directory")
     args = parser.parse_args()
-
     config = load_config(args.config)
     output_dir = args.output_dir or ROOT / config["output"]["dir"]
     output_dir.mkdir(parents=True, exist_ok=True)
-
     employees = create_employee_dataframe()
-
     if args.section in ("all", "basics"):
         run_python_basics()
 

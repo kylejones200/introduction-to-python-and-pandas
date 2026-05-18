@@ -21,7 +21,6 @@ def plot_age_histogram(
     ax.set_xlabel("Age")
     ax.set_ylabel("Frequency")
     ax.set_title("Age Distribution")
-
     saved: Path | None = None
     if output_path is not None:
         output_path.parent.mkdir(parents=True, exist_ok=True)

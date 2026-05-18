@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import matplotlib
+import pytest
+from src.pandas_structures import create_employee_dataframe
 
 matplotlib.use("Agg")
 
-import pytest
-from src.pandas_structures import create_employee_dataframe
 
 
 @pytest.fixture
