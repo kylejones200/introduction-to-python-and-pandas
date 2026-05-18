@@ -2,6 +2,14 @@
 
 Runnable examples from the Medium article [Introduction to Python and Pandas](https://medium.com/@kyle-t-jones/introduction-to-python-and-pandas-4ea7346aaf3e). The original export is in `article.md`.
 
+## Business context
+
+Python is a widely-used high-level programming language known for its readable syntax and versatility. It supports multiple programming paradigms, including object-oriented, imperative, functional, and procedural programming styles. Python's dynamic typing and automatic memory management simplify development, making it a go-to language for data analysis and scientific computing.
+
+Pandas, built on top of NumPy, is an open-source data manipulation and analysis library that offers high-performance, easy-to-use data structures like Series and DataFrames. These structures allow efficient handling of structured data, resembling columns in spreadsheets or tables in SQL databases.
+
+Python emphasizes readable and straightforward syntax. It uses whitespace indentation instead of curly braces or keywords to define code blocks, making it intuitive and easy to learn.
+
 ## Quick start
 
 ```bash
